@@ -9,9 +9,12 @@
     "start:dev": "set NODE_ENV=development&& nodemon start index.js",
     "pretty": "prettier  --write **/*.js",
     "lint": "eslint --fix **/*.js",
-    "test": "jest",
     "pre-commit": "npm run pretty && npm run lint && npm test",
-    "test:watch": "jest --watch"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "db-create": "node models/db"
+    
+    
   },
   "repository": {
     "type": "git",
@@ -24,13 +27,13 @@
   },
   "homepage": "https://github.com/orennitzan/bootcamp-step-3#readme",
   "dependencies": {
+    "dotenv": "latest",
     "koa": "^2.6.0",
     "koa-router": "^7.4.0",
-    "postgresql": "0.0.1",
+    "pg": "^7.6.0",
     "request-promise-native": "^1.0.5",
     "semver": "^5.6.0",
-    "winston": "^3.1.0",
-    "dotenv": "latest"
+    "winston": "^3.1.0"
   },
   "devDependencies": {
     "eslint": "^5.8.0",

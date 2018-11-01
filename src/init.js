@@ -30,4 +30,4 @@ const initiationObject = {
   }
 };
 
-export default initiationObject;
+module.exports = { initiationObject }

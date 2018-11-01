@@ -5,8 +5,11 @@ logger.info('index.js - Starting...');
 // Initiation
 
 require('./src/init')
+  .initiationObject
   .initEnvironmentParameters()
-  .validatePort();
+  .validatePort()
+  ;
 
 // Web Init
-require('./web/index.js');
+require('./web/index');
+
